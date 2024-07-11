@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { flushSync } from 'react-dom';
+
+import Moveable from 'react-moveable';
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Moveable flushSync={flushSync} />
     </div>
   );
 }
