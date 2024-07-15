@@ -110,6 +110,7 @@ function DragTarget({ id }: TargetProps) {
     }
   };
 
+
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutSide);
 
