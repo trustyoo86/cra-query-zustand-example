@@ -57,7 +57,7 @@ type TargetProps = {
 
 function DragTarget({ id }: TargetProps) {
   const [helper] = useState(() => new MoveableHelper());
-  // const targetRef = useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLDivElement>(null);
   // const [isMounted, setMounted] = useState<boolean>(false);
   const [target, setTarget] = useState<EventTarget | null>(null);
   // const [elOptions, setElOptions] = useReducer(
@@ -104,9 +104,24 @@ function DragTarget({ id }: TargetProps) {
     console.log(target.style.width, target.style.height);
   };
 
+  const handleClickOutSide = (ev: MouseEvent) => {
+    if (!targetRef.current?.contains(ev.target as Node)) {
+      setTarget(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutSide);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutSide);
+    };
+  }, []);
+
   return (
     <>
       <div
+        ref={targetRef}
         onMouseDown={handleMouseDown}
         id={`moveable-${id}`}
         key={`moveable-${id}`}
