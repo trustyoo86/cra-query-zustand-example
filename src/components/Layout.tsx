@@ -1,6 +1,30 @@
 import { theme } from "antd";
 import Layout, { Content, Footer, Header } from "antd/es/layout/layout";
-import { PropsWithChildren } from "react";
+import { CSSProperties, PropsWithChildren } from "react";
+
+const styles: Record<string, CSSProperties> = {
+  header: {
+    display: 'flex',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 21,
+    padding: '0 24px',
+    justifyContent: 'space-between',
+  },
+  content: {
+    // marginTop: 104,
+    // marginBottom: 50,
+    padding: '104px 30px 50px 30px',
+    height: 'calc(100vh - 70px)',
+    boxSizing: 'border-box',
+  },
+  contentChild: {
+    width: '100%',
+    height: '100%',
+  },
+};
 
 function EditorLayout({ children }: PropsWithChildren) {
   const {
@@ -9,10 +33,10 @@ function EditorLayout({ children }: PropsWithChildren) {
 
   return (
     <Layout>
-      <Header style={{ display: 'flex', alignItems: 'center' }}></Header>
+      <Header style={styles.header}></Header>
       <Content
-        style={{ padding: 48 }}>
-        <div style={{ background: colorBgContainer, minHeight: 280, padding: 24, borderRadius: borderRadiusLG }}>
+        style={styles.content}>
+        <div style={{ background: colorBgContainer, padding: 24, borderRadius: borderRadiusLG, ...styles.contentChild }}>
           {children}
         </div>
       </Content>

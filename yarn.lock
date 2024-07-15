@@ -1223,6 +1223,13 @@
   dependencies:
     "@egjs/component" "^3.0.2"
 
+"@cfcs/core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cfcs/core/-/core-0.1.0.tgz#64346f7634b46de6e9b1d4c195743b9b8e603162"
+  integrity sha512-kvYX0RpL45XTHJ5sW7teNbKeAa7pK3nNqaJPoFfZDPTIBJOkTtRD3QhkBG+O3Hu69a8xeMoPvF6y/RtJ6JUOdA==
+  dependencies:
+    "@egjs/component" "^3.0.4"
+
 "@craco/craco@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-7.1.0.tgz#12bd394c7f0334e214302e4d35a1768f68042fbb"
@@ -1359,7 +1366,7 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz#b6c75a56a1947cc916ea058772d666a2c8932f31"
   integrity sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==
 
-"@daybrush/utils@^1.1.1", "@daybrush/utils@^1.13.0", "@daybrush/utils@^1.4.0", "@daybrush/utils@^1.6.0", "@daybrush/utils@^1.7.1":
+"@daybrush/utils@^1.0.0", "@daybrush/utils@^1.1.1", "@daybrush/utils@^1.10.2", "@daybrush/utils@^1.13.0", "@daybrush/utils@^1.4.0", "@daybrush/utils@^1.6.0", "@daybrush/utils@^1.7.1":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@daybrush/utils/-/utils-1.13.0.tgz#ea70a60864130da476406fdd1d465e3068aea0ff"
   integrity sha512-ALK12C6SQNNHw1enXK+UO8bdyQ+jaWNQ1Af7Z3FNxeAwjYhQT7do+TRE4RASAJ3ObaS2+TJ7TXR3oz2Gzbw0PQ==
@@ -1376,7 +1383,7 @@
   dependencies:
     "@egjs/list-differ" "^1.0.0"
 
-"@egjs/component@^3.0.2":
+"@egjs/component@^3.0.2", "@egjs/component@^3.0.4":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@egjs/component/-/component-3.0.5.tgz#2dc86e835d5dc5055cdf46c7cd794eb45330e1b6"
   integrity sha512-cLcGizTrrUNA2EYE3MBmEDt2tQv1joVP1Q3oDisZ5nw0MZDx2kcgEXM+/kZpfa/PAkFvYVhRUZwytIQWoN3V/w==
@@ -1957,7 +1964,7 @@
     "@daybrush/utils" "^1.6.0"
     "@scena/event-emitter" "^1.0.2"
 
-"@scena/event-emitter@^1.0.2", "@scena/event-emitter@^1.0.5":
+"@scena/event-emitter@^1.0.2", "@scena/event-emitter@^1.0.3", "@scena/event-emitter@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@scena/event-emitter/-/event-emitter-1.0.5.tgz#047e3acef93cf238d7ce3a8cc5a12ec6bd9c3bb1"
   integrity sha512-AzY4OTb0+7ynefmWFQ6hxDdk0CySAq/D4efljfhtRHCOP7MBF9zUfhKG3TJiroVjASqVgkRJFdenS8ArZo6Olg==
@@ -4118,7 +4125,7 @@ css-select@^4.1.3:
     domutils "^2.8.0"
     nth-check "^2.0.1"
 
-css-styled@^1.0.8, css-styled@~1.0.8:
+css-styled@^1.0.6, css-styled@^1.0.8, css-styled@~1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/css-styled/-/css-styled-1.0.8.tgz#c9c05dc4abdef5571033090bfb8cfc5e19429974"
   integrity sha512-tCpP7kLRI8dI95rCh3Syl7I+v7PP+2JYOzWkl0bUEoSbJM+u8ITbutjlQVf0NC2/g4ULROJPi16sfwDIO8/84g==
@@ -7372,6 +7379,14 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+moveable-helper@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/moveable-helper/-/moveable-helper-0.4.0.tgz#95dbbc20258d827223a715d9d694f5d2f1b14d65"
+  integrity sha512-t1FK9PO187Gn0N6GVZcrQgePjiHmuj8eUhmJjH38LvTMnVVxiHzWYRx6ARFZvSFIIW4yb6BEAv4C99Bsx84nFw==
+  dependencies:
+    "@daybrush/utils" "^1.0.0"
+    scenejs "^1.4.2"
+
 moveable@^0.53.0:
   version "0.53.0"
   resolved "https://registry.yarnpkg.com/moveable/-/moveable-0.53.0.tgz#5574b910d58ce4b71e260c17661b6c78c4909b13"
@@ -7664,6 +7679,11 @@ optionator@^0.9.3:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.5"
+
+order-map@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/order-map/-/order-map-0.3.1.tgz#0d519e2ad79c1606eb037d59fb191ab9bd5ce37b"
+  integrity sha512-RSuElIGwzPuBLzS9Io7G8fpcnQeudg0XswOyOiwRNLX7lkf+eQ/KUp+kcAP7z7nTOdkrfxhZycyXwzFW75iJ6A==
 
 overlap-area@^1.1.0:
   version "1.1.0"
@@ -9436,6 +9456,17 @@ saxes@^5.0.1:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
+
+scenejs@^1.4.2:
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/scenejs/-/scenejs-1.10.3.tgz#8ace9dab59ecb5db0a8eb2c07268cb30876ad60f"
+  integrity sha512-o1Xrz5sRMeVOD5R9MizY2tYVPYeRnQNttiNRD7vtfi4j4+su1nuP2R/1yv3jDNol1zFfFHwwh2G0jxyt0SIqUA==
+  dependencies:
+    "@cfcs/core" "^0.1.0"
+    "@daybrush/utils" "^1.10.2"
+    "@scena/event-emitter" "^1.0.3"
+    css-styled "^1.0.6"
+    order-map "^0.3.1"
 
 scheduler@^0.23.2:
   version "0.23.2"

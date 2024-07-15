@@ -1,6 +1,7 @@
 import EditorLayout from "@/components/Layout";
-import { useReducer } from "react";
+// import { useReducer } from "react";
 import DragTarget from "./DragTarget";
+import { useElementStore } from "@/stores/element";
 
 // type Position = {
 //   left: number;
@@ -10,24 +11,32 @@ import DragTarget from "./DragTarget";
 //   transform?: string;
 // };
 
-type Element = {
-  id: number;
-};
 
 function EditorPage() {
-  const [element, setElement] = useReducer(
-    (prev: Element[], next: Element[]) => ([
-      ...prev,
-      ...next,
-    ]),
-    []
-  );
+  const { elements, add } = useElementStore();
+
+  /** @note use reducer */
+  // type Element = {
+  //   id: number;
+  // };
+  // const [element, setElement] = useReducer(
+  //   (prev: Element[], next: Element[]) => ([
+  //     ...prev,
+  //     ...next,
+  //   ]),
+  //   []
+  // );
+
+  /** @note use reducer */
+  // const handleAddElement = () => {
+  //   const len = element.length;
+  //   console.log('element', element);
+  //   setElement([{ id: len }]);
+
+  // };
 
   const handleAddElement = () => {
-    const len = element.length;
-    console.log('element', element);
-    setElement([{ id: len }]);
-
+    add();
   };
 
   return (
@@ -37,7 +46,7 @@ function EditorPage() {
           Moveable 추가
         </button>
         {
-          element.map((el) => <DragTarget id={el.id} key={`moveable-${el.id}`} />)
+          elements.map((el) => <DragTarget id={el.id} key={`moveable-${el.id}`} />)
         }
       </div>
     </EditorLayout>
