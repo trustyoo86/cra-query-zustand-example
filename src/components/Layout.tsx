@@ -36,7 +36,7 @@ function EditorLayout({ children }: PropsWithChildren) {
       <Header style={styles.header}></Header>
       <Content
         style={styles.content}>
-        <div style={{ background: colorBgContainer, padding: 24, borderRadius: borderRadiusLG, ...styles.contentChild }}>
+        <div style={{ background: colorBgContainer, borderRadius: borderRadiusLG, ...styles.contentChild }}>
           {children}
         </div>
       </Content>
